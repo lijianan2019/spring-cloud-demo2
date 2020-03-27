@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/lijianan2019/spring-cloud-demo2.git
+          search-paths:
+          - configfiles
+      label: dev
+server:
+  port: 8888

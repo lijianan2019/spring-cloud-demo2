@@ -10,6 +10,8 @@
         <module name="service-order" />
         <module name="register-server" />
         <module name="service-product" />
+        <module name="config-server" />
+        <module name="config-client" />
         <module name="gateway-server" />
         <module name="zuul-gateway-server" />
       </profile>
@@ -17,6 +19,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="config-client" options="-parameters" />
+      <module name="config-server" options="-parameters" />
       <module name="gateway-server" options="-parameters" />
       <module name="register-server" options="-parameters" />
       <module name="service-order" options="-parameters" />
