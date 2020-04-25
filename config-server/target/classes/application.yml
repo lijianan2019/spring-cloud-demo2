@@ -11,3 +11,10 @@ spring:
       label: dev
 server:
   port: 8888
+  #给配置中心服务端加访问前缀，在网关配置路由
+  servlet:
+    context-path: /config/
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

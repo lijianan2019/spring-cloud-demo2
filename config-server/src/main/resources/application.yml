@@ -8,6 +8,13 @@ spring:
           uri: https://github.com/lijianan2019/spring-cloud-demo2.git
           search-paths:
           - configfiles
-      label: dev
+      label: master
 server:
   port: 8888
+  #给配置中心服务端加访问前缀，在网关配置路由
+  servlet:
+    context-path: /config/
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
